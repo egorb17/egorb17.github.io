@@ -1,0 +1,14 @@
+.canvas-container {
+    border: 1px solid black;
+    width: 1000px;
+    height: 500px;
+    margin-bottom: 10px;
+}
+
+/* img {
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+} */
