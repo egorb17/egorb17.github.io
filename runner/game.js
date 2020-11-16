@@ -352,8 +352,8 @@ function InitGame() {
 // Показывает счёт на экране
 function ShowScore() {
     context.font = "25px arial"
-    context.fillText("Record:" + maxScore, 800, 40)
-    context.fillText("Score:" + score, 800, 70)
+    context.fillText("H: " + maxScore, 800, 40)
+    context.fillText("S: " + score, 800, 70)
 }
 
 // Функция процесса игры - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
