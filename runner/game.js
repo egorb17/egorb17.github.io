@@ -295,6 +295,20 @@ window.onload = function() {
 
     // Инициализация игры
     InitGame()
+    LoadScore()
+    ShowScore()
+}
+
+function LoadScore() {
+    let scoreValue = parseInt(localStorage.getItem('MaxScore'))
+
+    if (scoreValue && !isNaN(scoreValue)) {
+        maxScore = scoreValue
+    }
+}
+
+function SaveScore() {
+    localStorage.setItem('MaxScore', maxScore)
 }
 
 function StartGame() {
@@ -312,6 +326,7 @@ function StopGame() {
     if (score > maxScore) {
         maxScore = score
         ShowScore()
+        SaveScore()
     }
 
     deadAudio.play()
@@ -337,8 +352,8 @@ function InitGame() {
 // Показывает счёт на экране
 function ShowScore() {
     context.font = "25px arial"
-    context.fillText("Record:" + maxScore, 800, 30)
-    context.fillText("Score:" + score, 800, 60)
+    context.fillText("Record:" + maxScore, 800, 40)
+    context.fillText("Score:" + score, 800, 70)
 }
 
 // Функция процесса игры - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
